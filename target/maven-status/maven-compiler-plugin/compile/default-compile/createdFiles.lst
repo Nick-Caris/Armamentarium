@@ -1,0 +1,4 @@
+com/armamentarium/Armamentarium/controllers/WeaponController.class
+com/armamentarium/Armamentarium/repositories/WeaponRepository.class
+com/armamentarium/Armamentarium/models/Weapon.class
+com/armamentarium/Armamentarium/ArmamentariumApplication.class

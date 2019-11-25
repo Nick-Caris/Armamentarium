@@ -1,0 +1,90 @@
+package com.armamentarium.Armamentarium.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Weapon {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "weapon")
+    private String weapon;
+
+    @Column(name = "handedness")
+    private String handedness;
+
+    @Column(name = "is_working")
+    private boolean is_working;
+
+    @Column(name = "comment")
+    private String comment;
+
+    @Column(name = "is_borrowed")
+    private boolean is_borrowed;
+
+    public Weapon(String weapon, String handedness, boolean is_working, String comment, boolean is_borrowed) {
+        this.weapon = weapon;
+        this.handedness = handedness;
+        this.is_working = is_working;
+        this.comment = comment;
+        this.is_borrowed = is_borrowed;
+    }
+
+    public Weapon() {
+
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
+    }
+
+    public String getHandedness() {
+        return handedness;
+    }
+
+    public void setHandedness(String handedness) {
+        this.handedness = handedness;
+    }
+
+    public boolean isIs_working() {
+        return is_working;
+    }
+
+    public void setIs_working(boolean is_working) {
+        this.is_working = is_working;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public boolean isIs_borrowed() {
+        return is_borrowed;
+    }
+
+    public void setIs_borrowed(boolean is_borrowed) {
+        this.is_borrowed = is_borrowed;
+    }
+}
