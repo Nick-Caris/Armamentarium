@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PartController {
 
-    @RequestMapping("/")
+    @RequestMapping("/part")
     public String index() {
         return "Greetings armory app from DQ";
     }
 
-    @RequestMapping()
+    @RequestMapping("/part/{id}")
     public Part getPart(Integer id) {
         return new Part();
     }

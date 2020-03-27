@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WeaponController {
 
-    @RequestMapping("/")
+    @RequestMapping("/weapon")
     public String index() {
         return "Greetings armory app from DQ";
     }
