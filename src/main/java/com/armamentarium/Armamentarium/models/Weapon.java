@@ -16,6 +16,9 @@ public class Weapon {
     @Column(name = "weapon")
     private String weapon;
 
+    @Column(name = "grip")
+    private String grip;
+
     @Column(name = "handedness")
     private String handedness;
 
@@ -28,17 +31,21 @@ public class Weapon {
     @Column(name = "is_borrowed")
     private boolean is_borrowed;
 
-    public Weapon(String weapon, String handedness, boolean is_working, String comment, boolean is_borrowed) {
+    public Weapon(String weapon, String grip, String handedness, boolean is_working, String comment, boolean is_borrowed) {
         this.weapon = weapon;
+        this.grip = grip;
         this.handedness = handedness;
         this.is_working = is_working;
         this.comment = comment;
         this.is_borrowed = is_borrowed;
     }
 
-    public Weapon() {
 
-    }
+    public Weapon() {}
+
+    public String getGrip() { return grip; }
+
+    public void setGrip(String grip) { this.grip = grip; }
 
     public Integer getId() {
         return id;
