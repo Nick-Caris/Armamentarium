@@ -1,20 +1,53 @@
 package com.armamentarium.Armamentarium.controllers;
 
 import com.armamentarium.Armamentarium.models.Part;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.armamentarium.Armamentarium.models.Part;
+import com.armamentarium.Armamentarium.repositories.PartRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class PartController {
 
-    @RequestMapping("/part")
+    @Autowired
+    private PartRepository repository;
+
+    @GetMapping("/part")
     public String index() {
         return "Greetings armory app from DQ";
     }
 
-    @RequestMapping("/part/{id}")
-    public Part getPart(Integer id) {
-        return new Part();
+    @PostMapping("/part")
+    public Part savePart(@RequestBody Part part) {
+        return repository.save(part);
+    }
+
+    @GetMapping("/parts")
+    public List<Part> getParts() {
+        return repository.findAll();
+    }
+
+    @GetMapping("/parts/sabre")
+    public List<Part> getSabre() {
+        return repository.findByWeapon("Sabre");
+    }
+
+    @GetMapping("/parts/foil")
+    public List<Part> getFoil() {
+        return repository.findByWeapon("Sabre");
+    }
+
+    @GetMapping("/parts/epee")
+    public List<Part> getEpee() {
+        return repository.findByWeapon("Sabre");
+    }
+
+    @GetMapping("/part/{id}")
+    public Optional<Part> getPart(@PathVariable Integer id) {
+        return repository.findById(id);
     }
 
 }
