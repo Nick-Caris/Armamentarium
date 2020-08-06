@@ -41,11 +41,16 @@ public class Weapon {
     }
 
 
-    public Weapon() {}
+    public Weapon() {
+    }
 
-    public String getGrip() { return grip; }
+    public String getGrip() {
+        return grip;
+    }
 
-    public void setGrip(String grip) { this.grip = grip; }
+    public void setGrip(String grip) {
+        this.grip = grip;
+    }
 
     public Integer getId() {
         return id;

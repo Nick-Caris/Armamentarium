@@ -1,7 +1,6 @@
 package com.armamentarium.Armamentarium.repositories;
 
 import com.armamentarium.Armamentarium.models.Part;
-import com.armamentarium.Armamentarium.models.Weapon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

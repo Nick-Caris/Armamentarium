@@ -31,17 +31,17 @@ public class WeaponController {
 
     @GetMapping("/weapons/sabre")
     public List<Weapon> getSabre() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapon("sabre");
     }
 
     @GetMapping("/weapons/foil")
     public List<Weapon> getFoil() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapon("foil");
     }
 
     @GetMapping("/weapons/epee")
     public List<Weapon> getEpee() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapon("epee");
     }
 
     @GetMapping("/weapon/{id}")
