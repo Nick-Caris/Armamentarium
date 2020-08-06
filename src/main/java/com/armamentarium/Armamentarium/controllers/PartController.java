@@ -31,17 +31,17 @@ public class PartController {
 
     @GetMapping("/parts/sabre")
     public List<Part> getSabre() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapons("sabre");
     }
 
     @GetMapping("/parts/foil")
     public List<Part> getFoil() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapons("foil");
     }
 
     @GetMapping("/parts/epee")
     public List<Part> getEpee() {
-        return repository.findByWeapon("Sabre");
+        return repository.findByWeapons("epee");
     }
 
     @GetMapping("/part/{id}")

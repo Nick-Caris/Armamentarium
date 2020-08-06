@@ -12,5 +12,5 @@ public interface PartRepository extends JpaRepository<Part, Integer> {
 
     Optional<Part> findById(Integer id);
 
-    List<Part> findByWeapon(String weapon);
+    List<Part> findByWeapons(String weapon);
 }
