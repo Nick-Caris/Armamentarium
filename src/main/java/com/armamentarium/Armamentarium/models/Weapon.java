@@ -31,13 +31,17 @@ public class Weapon {
     @Column(name = "is_borrowed")
     private boolean is_borrowed;
 
-    public Weapon(String weapon, String grip, String handedness, boolean is_working, String comment, boolean is_borrowed) {
+    @Column(name = "electric")
+    private String electric;
+
+    public Weapon(String weapon, String grip, String handedness, boolean is_working, String comment, boolean is_borrowed, String electric) {
         this.weapon = weapon;
         this.grip = grip;
         this.handedness = handedness;
         this.is_working = is_working;
         this.comment = comment;
         this.is_borrowed = is_borrowed;
+        this.electric = electric;
     }
 
 
@@ -98,5 +102,13 @@ public class Weapon {
 
     public void setIs_borrowed(boolean is_borrowed) {
         this.is_borrowed = is_borrowed;
+    }
+
+    public String getElectric() {
+        return electric;
+    }
+
+    public void setElectric(String electric) {
+        this.electric = electric;
     }
 }
