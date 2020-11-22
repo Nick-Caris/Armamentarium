@@ -32,9 +32,9 @@ public class Weapon {
     private boolean is_borrowed;
 
     @Column(name = "electric")
-    private String electric;
+    private boolean electric;
 
-    public Weapon(String weapon, String grip, String handedness, boolean is_working, String comment, boolean is_borrowed, String electric) {
+    public Weapon(String weapon, String grip, String handedness, boolean is_working, String comment, boolean is_borrowed, boolean electric) {
         this.weapon = weapon;
         this.grip = grip;
         this.handedness = handedness;
