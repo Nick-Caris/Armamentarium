@@ -104,11 +104,11 @@ public class Weapon {
         this.is_borrowed = is_borrowed;
     }
 
-    public String getElectric() {
+    public boolean getElectric() {
         return electric;
     }
 
-    public void setElectric(String electric) {
+    public void setElectric(boolean electric) {
         this.electric = electric;
     }
 }
