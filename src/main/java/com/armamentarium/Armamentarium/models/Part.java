@@ -17,19 +17,20 @@ public class Part {
     private String name;
 
     @Column(name = "amount")
-    private String amount;
+    private Integer amount;
 
     @Column(name = "amount_working")
-    private boolean amount_working;
+    private Integer amount_working;
 
     @Column(name = "comment")
     private String comment;
 
+//  What weapons is it connected to?
     @Column(name = "weapons")
     private String weapons;
 
 
-    public Part(Integer id, String name, String amount, boolean amount_working, String comment, String weapons) {
+    public Part(Integer id, String name, Integer amount, Integer amount_working, String comment, String weapons) {
         this.id = id;
         this.name = name;
         this.amount = amount;
@@ -58,19 +59,19 @@ public class Part {
         this.name = name;
     }
 
-    public String getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 
-    public boolean isAmount_working() {
+    public Integer getAmount_working() {
         return amount_working;
     }
 
-    public void setAmount_working(boolean amount_working) {
+    public void setAmount_working(Integer amount_working) {
         this.amount_working = amount_working;
     }
 

@@ -49,4 +49,10 @@ public class PartController {
         return repository.findById(id);
     }
 
+    @DeleteMapping("/part/{id}")
+    public List<Part> removeWeapon(@PathVariable Integer id) {
+        Part part = repository.getOne(id);
+        repository.deleteById(part.getId());
+        return getParts();
+    }
 }

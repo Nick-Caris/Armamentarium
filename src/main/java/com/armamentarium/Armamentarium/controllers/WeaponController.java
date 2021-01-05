@@ -50,9 +50,10 @@ public class WeaponController {
     }
 
     @DeleteMapping("/weapon/{id}")
-    public void removeWeapon(@PathVariable Integer id) {
+    public List<Weapon> removeWeapon(@PathVariable Integer id) {
         Weapon weapon = repository.getOne(id);
         repository.deleteById(weapon.getId());
+        return getWeapons();
     }
 
 }
